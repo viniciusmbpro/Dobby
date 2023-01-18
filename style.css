@@ -1,0 +1,267 @@
+:root {
+    --primary: #09203b;
+    --secondary: #273a52;
+    --tertiary: #364d64;
+    --accent: #434f5c;
+    --background-one: #0b1d2b;
+    --background-two: #08223a;
+    --text-color: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 14pt;
+}
+
+body {
+    background: #213f5c;
+}
+
+header {
+    color: var(--text-color);
+    background: var(--background-one);
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: rgb(0, 168, 146) 1px solid;
+}
+header h1 {
+    padding: 0.5rem;
+}
+
+main {
+    width: 100vw;
+    height: 90vh;
+}
+main .container {
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+main .container .conversas {
+    width: 20%;
+    background: var(--background-two);
+    position: relative;
+    display: block;
+    height: 100%;
+}
+main .container .conversas #nova_conversa {
+    background: rgb(33, 88, 33);
+    display: block;
+    color: white;
+    padding: 0.2rem;
+    margin: 0.2rem auto;
+    border: var(--primary) 1px solid;
+    border-radius: 5px;
+    font-size: 13pt;
+    cursor: pointer;
+    width: 90%;
+    height: 5%;
+}
+main .container .conversas ol {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 95%;
+    overflow: auto;
+}
+main .container .conversas ol::-webkit-scrollbar { width: 10px;}
+main .container .conversas ol::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
+main .container .conversas ol::-webkit-scrollbar-thumb { background: linear-gradient(to left, var(--background-two), var(--tertiary)); }
+main .container .conversas ol li {
+    border-bottom: #5a7fa5 solid 1px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+}
+main .container .conversas ol li p {
+    flex-basis: 80%;
+    display: inline;
+    cursor:zoom-in;
+}
+main .container .conversas ol li button {
+    display: inline;
+    background: var(--secondary);
+    color: white;
+    padding: 0.2rem;
+    margin: 0rem 0.2rem;
+    height: 1.5rem;
+    border: var(--primary) 1px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 11pt;
+    flex-basis: 10%;
+}
+#hamburguer_conv {
+    background: var(--background-one);
+    color: white;
+    border: solid 1px rgb(52, 77, 73);
+    cursor: pointer;
+    padding: 0.2rem;
+    position: absolute;
+    font-size: 20pt;
+    left: 0%;
+    top: 5vh;
+    z-index: 10;
+}
+
+/* Tela de configurações */
+#hamburguer_config {
+    background: var(--background-one);
+    color: white;
+    border: solid 1px rgb(52, 77, 73);
+    cursor: pointer;
+    padding: 0.2rem;
+    position: absolute;
+    font-size: 20pt;
+    right: 0%;
+    top: 5vh;
+    z-index: 10;
+    width: max-content;
+}
+main .container .configuracoes {
+    position: absolute;
+    right: 0%;
+    z-index: 9;
+    height: max-content;
+    background: #0b1d2b;
+    padding: 10px;
+    display: none;
+}
+
+main .chat {
+    width: 80%;
+    background: var(--secondary);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat .input_user {
+    width: 100%;
+    background: var(--background-one);
+    flex-basis: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.chat .input_user textarea {
+    flex-basis: 95%;
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 14pt;
+    background: var(--background-one);
+    color: white;
+    outline: none;
+    border: #0c2c54 solid 1px;
+    border-radius: 10px;
+    box-shadow: #2c5282 0px 0px 10px;
+    min-height: 1.2rem;
+    max-height: 15rem;
+    resize: vertical;
+}
+.chat .input_user textarea::-webkit-scrollbar { width: 10px; }
+.chat .input_user textarea::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
+.chat .input_user textarea::-webkit-scrollbar-thumb { background: linear-gradient(to right, var(--background-two), var(--tertiary)); }
+
+.chat .input_user button {
+    flex-basis: 5%;
+    display: inline-block;
+    border: var(--secondary) solid 1px;
+    border-radius: 5px;
+    font-size: 14pt;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 3rem;
+}
+.chat .mensagens_list {
+    width: 100%;
+    flex-basis: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.chat .mensagens_list::-webkit-scrollbar { width: 10px; }
+.chat .mensagens_list::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
+.chat .mensagens_list::-webkit-scrollbar-thumb { background: linear-gradient(to right, var(--background-two), var(--tertiary)); }
+.chat .mensagens_list div {
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 70%;
+    white-space: pre-wrap;
+    position: relative;
+}
+.chat .mensagens_list .jarvis_msg {
+    border-radius: 0px 30px 30px 30px;
+    background: rgb(25, 39, 41);
+    align-self: flex-start;
+}
+.chat .mensagens_list .user_msg {
+    border-radius: 30px 0px 30px 30px;
+    background: rgb(7, 51, 34);
+    align-self: flex-end;
+}
+.chat .mensagens_list div textarea {
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    resize: both;
+    overflow: auto;
+    width: 100%;
+}
+.chat .mensagens_list div textarea::-webkit-scrollbar { width: 10px; }
+.chat .mensagens_list div textarea::-webkit-scrollbar-track { background: rgb(255, 255, 255); }
+.chat .mensagens_list div textarea::-webkit-scrollbar-thumb { background: linear-gradient(to right, var(--background-two), var(--tertiary)); }
+.chat .mensagens_list div .tokens {
+    background: rgb(192, 163, 0);
+    color: white;
+    width: max-content;
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 0.2rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+.chat .mensagens_list div .audio_player {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: -10px;
+    right: 0%;
+}
+.chat .mensagens_list div .audio_player button {
+    border: none;
+    background: var(--background-one);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 12pt;
+}
+.chat .mensagens_list div .audio_player button:hover {
+    background: #1b2c3a;
+}
+
+footer {
+    color: var(--text-color);
+    background: var(--background-one);
+    width: 100vw;
+    height: 4.8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+footer p {
+    font-size: 12pt;
+}

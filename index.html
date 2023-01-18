@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobby</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media_querys.css">
+</head>
+
+<body>
+    <header>
+        <h1>Dobby</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <button id="hamburguer_conv">|||</button>
+            <div class="conversas">
+                <button id="nova_conversa">Nova conversa</button>
+                <ol></ol>
+            </div>
+
+            <button id="hamburguer_config">|||</button>
+            <div class="configuracoes">
+                <select id="engine" onchange="getEngineValue()">
+                    <option value="text-davinci-003" selected>text-davinci-003</option>
+                    <option value="text-curie-001">text-curie-001</option>
+                    <option value="text-babbage-001">text-babbage-001</option>
+                    <option value="text-ada-001">text-ada-001</option>
+                </select><br><br>
+                <input id="api_key" type="text" placeholder="Chave da API">
+            </div>
+
+            <div class="chat">
+                <div class="mensagens_list">
+                </div>
+
+                <div class="input_user">
+                    <button submit id="falar">Falar</button>
+                    <textarea id="text_input" cols="30" rows="1"></textarea>
+                    <button submit id="enviar">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Dobby pode te responder tudo que quiser.</p>
+    </footer>
+
+    <script src="audio.js"></script>
+    <script src="armazenador.js"></script>
+    <script src="gerador.js"></script>
+    <script src="scripts.js"></script>
+    <script src="fala.js"></script>
+</body>
+
+</html>

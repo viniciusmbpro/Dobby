@@ -1,0 +1,22 @@
+/* smartphones, portrait orientation */
+@media (max-width: 480px) { 
+    main .chat {
+        width: 100%;
+    }
+    main .container .conversas {
+        display: none;
+        position: absolute;
+        width: 60%;
+        z-index: 9;
+    }
+}
+
+/* tablets, landscape orientation */
+@media (min-width: 768px) and (max-width: 1024px) { 
+/* styles here */
+}
+
+/* desktops */
+@media (min-width: 1224px) { 
+/* styles here */
+}
