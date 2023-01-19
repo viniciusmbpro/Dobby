@@ -11,3 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: bohr-io/action@main
+      - name: Set environment variables
+        run: export API_KEY=${{ secrets.API_KEY }}
