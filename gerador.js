@@ -8,10 +8,11 @@ function getEngineValue() {
 }
 getEngineValue();
 
-function getApiKey() {
-    var api_key = document.getElementById("api_key").value;
-    return api_key;
-}
+function getApiKey() { return document.getElementById("api_key").value; }
+function getMaxTokens() { return parseInt(document.getElementById("max_tokens").value); }
+function getTemperature() { return parseFloat(document.getElementById("temperature").value); }
+function getF_penalty() { return parseFloat(document.getElementById("f_penalty").value); }
+function getP_penalty() { return parseFloat(document.getElementById("p_penalty").value); }
 
 //Gerando mensagens
 function generateText(input) {
@@ -24,12 +25,10 @@ function generateText(input) {
         },
         body: JSON.stringify({
             prompt: input,
-            temperature: 0.5,
-            max_tokens: 2000,
-            temperature: 0.5,
-            top_p: 1.0,
-            frequency_penalty: 0.0,
-            presence_penalty: 0.0
+            max_tokens: getMaxTokens(),
+            temperature: getTemperature(),
+            frequency_penalty: getF_penalty(),
+            presence_penalty: getP_penalty()
         })
     })
         .then(response => response.json())
