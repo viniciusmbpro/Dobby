@@ -135,6 +135,12 @@ main .container .configuracoes {
     padding: 10px;
     display: none;
 }
+main .container .configuracoes input {
+    width: 60px;
+}
+#api_key {
+    width: 100%;
+}
 
 main .chat {
     width: 80%;
