@@ -8,7 +8,21 @@ function getEngineValue() {
 }
 getEngineValue();
 
-function getApiKey() { return document.getElementById("api_key").value; }
+function getApiKey() { 
+    var storedAPIKey = localStorage.getItem("api_key");
+    var input_api = document.getElementById("api_key").value;
+
+    if (storedAPIKey && input_api.length<5) {
+        var api_key = storedAPIKey;
+        document.getElementById("api_key").value = storedAPIKey;
+    } else {
+        localStorage.setItem("api_key", input_api);
+        var api_key = input_api;
+    }
+    return api_key;
+}
+getApiKey();
+
 function getMaxTokens() { return parseInt(document.getElementById("max_tokens").value); }
 function getTemperature() { return parseFloat(document.getElementById("temperature").value); }
 function getF_penalty() { return parseFloat(document.getElementById("f_penalty").value); }
