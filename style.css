@@ -261,6 +261,9 @@ main .chat {
 .chat .mensagens_list div .audio_player button:hover {
     background: #1b2c3a;
 }
+#api_padrao {
+    display: none;
+}
 
 footer {
     color: var(--text-color);
