@@ -1,7 +1,7 @@
 # Dobby
 Um chatbot que usa api da GPT-3, com reconhecimento de fala e reprodução de voz.
 
-Deploy: https://viniciusmbpro.github.io/Dobby/
+Deploy: https://dobby.bohr.io/
 
 ### index.html
 1. Contém uma tag head com meta informações e links para folhas de estilo CSS
