@@ -20,12 +20,10 @@ var ham_config = document.getElementById("hamburguer_config");
 ham_config.addEventListener("click", function(){
   if(ham_config.parentNode.querySelector(".configuracoes").style.display === "none"){
     ham_config.parentNode.querySelector(".configuracoes").style.display = "block";
-    ham_config.parentNode.querySelector(".chat").style.width = "100%";
 
     ham_config.style.right = ham_config.parentNode.querySelector(".configuracoes").offsetWidth + "px";
   } else {
     ham_config.parentNode.querySelector(".configuracoes").style.display = "none";
-    ham_config.parentNode.querySelector(".chat").style.width = "100%";
 
     ham_config.style.right = "0px";
   }

@@ -12,12 +12,16 @@ function getApiKey() {
     var storedAPIKey = localStorage.getItem("api_key");
     var input_api = document.getElementById("api_key").value;
 
-    if (storedAPIKey && input_api.length<5) {
-        var api_key = storedAPIKey;
-        document.getElementById("api_key").value = storedAPIKey;
+    if (document.querySelector("#api_padrao").checked) {
+        var api_key = process.env.API_KEY;
     } else {
-        localStorage.setItem("api_key", input_api);
-        var api_key = input_api;
+        if (storedAPIKey && input_api.length<5) {
+            var api_key = storedAPIKey;
+            document.getElementById("api_key").value = storedAPIKey;
+        } else {
+            localStorage.setItem("api_key", input_api);
+            var api_key = input_api;
+        }
     }
     return api_key;
 }

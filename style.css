@@ -58,7 +58,8 @@ main .container .conversas #nova_conversa {
     color: white;
     padding: 0.2rem;
     margin: 0.2rem auto;
-    border: var(--primary) 1px solid;
+    border: none;
+    box-shadow: none;
     border-radius: 5px;
     font-size: 13pt;
     cursor: pointer;
@@ -93,7 +94,8 @@ main .container .conversas ol li button {
     padding: 0.2rem;
     margin: 0rem 0.2rem;
     height: 1.5rem;
-    border: var(--primary) 1px solid;
+    border: none;
+    box-shadow: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 11pt;
@@ -102,7 +104,8 @@ main .container .conversas ol li button {
 #hamburguer_conv {
     background: var(--background-one);
     color: white;
-    border: solid 1px rgb(52, 77, 73);
+    border: none;
+    border-top: solid 1px rgb(0, 168, 146);
     cursor: pointer;
     padding: 0.2rem;
     position: absolute;
@@ -116,7 +119,8 @@ main .container .conversas ol li button {
 #hamburguer_config {
     background: var(--background-one);
     color: white;
-    border: solid 1px rgb(52, 77, 73);
+    border: none;
+    border-top: solid 1px rgb(0, 168, 146);
     cursor: pointer;
     padding: 0.2rem;
     position: absolute;
@@ -164,9 +168,9 @@ main .chat {
     background: var(--background-one);
     color: white;
     outline: none;
-    border: #0c2c54 solid 1px;
-    border-radius: 10px;
-    box-shadow: #2c5282 0px 0px 10px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: #2c5282 0px 0px 5px;
     min-height: 1.2rem;
     max-height: 15rem;
     resize: vertical;
@@ -178,8 +182,8 @@ main .chat {
 .chat .input_user button {
     flex-basis: 5%;
     display: inline-block;
-    border: var(--secondary) solid 1px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 0px;
     font-size: 14pt;
     background: var(--primary);
     color: white;
